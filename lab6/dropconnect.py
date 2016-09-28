@@ -96,6 +96,7 @@ for p in prob_list:
     for i in range( 1500 ):
         _, acc = sess.run( [ train_step, accuracy ], feed_dict={ x: images, y_: labels, prob:p, scale:1} )
         print( "step %d, training accuracy %g" % (i, acc) )
+    _, acc = sess.run( [ train_step, accuracy ], feed_dict={ x: images, y_: labels, prob:1, scale:p} )
     train_acc.append(acc)
     
 
