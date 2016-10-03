@@ -1,0 +1,50 @@
+1, \cot (x)^3
+2, x^{1/x}
+3, \sin (\cosh (x)) + \sin (\cosh (x)) * \sin (\cosh (x)) + \sin (\cosh (x))^3 + \sin (\cosh (x)) + \sin (\cosh (x)) * \sin (\cosh (x)) + \sin (\cosh (x))^3 * \sin (\cosh (x)) + \sin (\cosh (x)) * \sin (\cosh (x)) + \sin (\cosh (x))^3 + \sin (\cosh (x)) + \sin (\cosh (x)) * \sin (\cosh (x)) + \sin (\cosh (x))^3
+4, \cosh (\sinh (\cot (x)))^7
+5, \csc (x^{x} * x^{x} - x^{x} * x^{x})
+6, \csc (x)^2
+7, \cosh (x)
+8, \frac{1}{\csc (2^{\sec (x)})}
+9, x + x
+10, x - x
+11, \cos (\frac{1}{x})
+12, \tanh (\cot (x))^5^6
+13, x^2^4^{1/x^2^4}^3
+14, \sinh (x)
+15, \tanh (x^7)
+16, \frac{\cot (x^6^7^7 * x^6^7^7)^{1/\cot (x^6^7^7 * x^6^7^7)}}{\cot (x^6^7^7 * x^6^7^7)^{1/\cot (x^6^7^7 * x^6^7^7)}}
+17, \tanh (x)
+18, \tanh (x)
+19, x^3^5
+20, \cot (\csc (2^{x^4}))
+21, x^6^3
+22, \csc (\sec (\cos (x)))^7
+23, \sec (\frac{x}{x}^6^4)
+24, x * x
+25, \sinh (x^4)^6
+26, 2^{\cosh (\tanh (x))}
+27, e^{\cot (\cos (x)^7)}
+28, x^6
+29, e^{x}^6^6^3 + e^{x}^6^6^3^5
+30, \sinh (e^{\frac{x}{x}} - e^{\frac{x}{x}})
+31, \tanh (\frac{1}{x})
+32, \cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))}^3 + \cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))}^3^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))}^3 + \cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))}^3}^6 * \cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))}^3 + \cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))}^3^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))}^3 + \cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))^{1/\cot (\sin (\sin (\sinh (\tan (\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))^{1/\sin (\sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}) * \sec (\frac{\cot (\cosh (x)^7)^5^3}{\cot (\cosh (x)^7)^5^3}))}))^4^4)))}^3}^6
+33, \tan (2^{x})
+34, e^{x^6}^5
+35, \tan (\csc (\tanh (\cos (x)^4^6))) - \tan (\csc (\tanh (\cos (x)^4^6)))
+36, \cosh (\tanh (\frac{1}{\sinh (x)}^{\frac{1}{\sinh (x)}}))
+37, \tanh (\cot (x)^3^{\cot (x)^3}^6)^{\tanh (\cot (x)^3^{\cot (x)^3}^6)}^7^3^{1/\tanh (\cot (x)^3^{\cot (x)^3}^6)^{\tanh (\cot (x)^3^{\cot (x)^3}^6)}^7^3}
+38, e^{2^{\cot (\frac{1}{x})}}
+39, x^5
+40, \sec (\frac{1}{\frac{x}{x}})^7
+41, \frac{\tanh (\cot (\sin (x^5^5))) + \tanh (\cot (\sin (x^5^5)))}{\tanh (\cot (\sin (x^5^5))) + \tanh (\cot (\sin (x^5^5)))}
+42, \cos (x - x^7)^3
+43, \sec (e^{\csc (x)})^7
+44, x + x
+45, 2^{2^{\cot (x)}^6}
+46, \cosh (\sinh (\frac{1}{2^{x^5}})^{1/\sinh (\frac{1}{2^{x^5}})})
+47, x^2
+48, e^{\frac{1}{\cosh (x - x)}}
+49, \frac{x^5 - x^5}{x^5 - x^5}
+50, \sinh (x^4)
