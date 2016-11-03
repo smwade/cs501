@@ -6,16 +6,13 @@ import numpy as np
 from textloader import TextLoader
 from tensorflow.python.ops.rnn_cell import BasicLSTMCell, MultiRNNCell
 from tensorflow.python.ops import seq2seq
-
-import matplotlib
-import matplotlib.pyplot as plt
 #
 #
 # -------------------------------------------
 #
 # Global variables
 
-batch_size = 10
+batch_size = 50
 
 sequence_length = 50
 
@@ -148,8 +145,18 @@ def sample( num=200, prime='ab' ):
 # ==================================================================
 # ==================================================================
 #
+gpu_enabled = False
 
-sess = tf.Session()
+if gpu_enabled is True:
+    config = tf.ConfigProto()
+    config.gpu_options.allow_growth = True
+    config.log_device_placement = True
+    sess = tf.Session(config=config)
+
+else:
+    sess = tf.Session()
+
+
 sess.run( tf.initialize_all_variables() )
 summary_writer = tf.train.SummaryWriter( "./tf_logs", graph=sess.graph )
 
@@ -188,9 +195,13 @@ for j in range(1000):
             lts.append( lt )
 
 #    print sample( num=60, prime="And " )
-    print sample( num=60, prime="ababab" )
-#    print sample( num=60, prime="foo ba" )
+#    print sample( num=60, prime="ababab" )
+    print sample( num=60, prime="foo ba" )
 #    print sample( num=60, prime="abcdab" )
+
+with open('final_out.txt', 'w') as outFile:
+    for _ in xrange(15):
+        outFile.write(sample(num=60, prime="foo ba"))
 
 summary_writer.close()
 
