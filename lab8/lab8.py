@@ -1,4 +1,4 @@
-
+# Sean Wade
 
 import tensorflow as tf
 import numpy as np
@@ -7,17 +7,22 @@ from textloader import TextLoader
 from tensorflow.python.ops.rnn_cell import BasicLSTMCell, MultiRNNCell
 from tensorflow.python.ops import seq2seq
 
+import matplotlib
+import matplotlib.pyplot as plt
+#
 #
 # -------------------------------------------
 #
 # Global variables
 
 batch_size = 10
+
 sequence_length = 50
 
 data_loader = TextLoader( ".", batch_size, sequence_length )
 
 vocab_size = data_loader.vocab_size  # dimension of one-hot encodings
+
 state_dim = 128
 
 num_layers = 2
@@ -42,55 +47,33 @@ inputs = tf.split( 1, sequence_length, in_onehot )
 inputs = [ tf.squeeze(input_, [1]) for input_ in inputs ]
 targets = tf.split( 1, sequence_length, targ_ph )
 
-weights = tf.Variable(tf.random_normal([state_dim, vocab_size]), name='weights')
-bias = tf.Variable(tf.random_normal([vocab_size]), name='bias')
+W = tf.Variable(tf.random_normal([state_dim, vocab_size]), name='W')
+b = tf.Variable(tf.random_normal([vocab_size]), name='b')
 
 learning_rate = 0.002
 
-# at this point, inputs is a list of length sequence_length
-# each element of inputs is [batch_size,vocab_size]
-
-# targets is a list of length sequence_length
-# each element of targets is a 1D vector of length batch_size
-
 # ------------------
-# YOUR COMPUTATION GRAPH HERE
+# COMPUTATION GRAPH 
 
-# create a BasicLSTMCell
-#   use it to create a MultiRNNCell
-#   use it to create an initial_state
-#     note that initial_state will be a *list* of tensors!
+cell1 = BasicLSTMCell( state_dim, state_is_tuple=False )
+cell2 = BasicLSTMCell( state_dim, state_is_tuple=False )
 
-cell = BasicLSTMCell( state_dim, state_is_tuple=False )
-cell_2 = BasicLSTMCell( state_dim, state_is_tuple=False )
-
-multicell = MultiRNNCell( [cell, cell_2], state_is_tuple=True)
+multicell = MultiRNNCell( [cell1, cell2], state_is_tuple=True)
 initial_state = multicell.zero_state(batch_size, tf.float32)
 
-# call seq2seq.rnn_decoder
 output, final_state = seq2seq.rnn_decoder(inputs, initial_state, multicell)
 
-# transform the list of state outputs to a list of logits.
-# use a linear transformation.
-logits = [tf.matmul(bit, weights) + bias for bit in output]
+logits = [tf.matmul(bit, W) + b for bit in output]
 
 one_weights = [1. for l in range(len(logits))]
 
-# call seq2seq.sequence_loss
 loss = seq2seq.sequence_loss(logits, targets, one_weights)
 
-# create a training op using the Adam optimizer
 optim = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
 
 
 # ------------------
-# YOUR SAMPLER GRAPH HERE
-
-# place your sampler graph here it will look a lot like your
-# computation graph, except with a "batch_size" of 1.
-
-# remember, we want to reuse the parameters of the cell and whatever
-# parameters you used to transform state outputs to logits!
+# SAMPLER GRAPH 
 
 tf.get_variable_scope().reuse_variables()
 
@@ -101,15 +84,11 @@ s_inputs = s_in_onehot
 
 s_initial_state = multicell.zero_state(1, tf.float32)
 
-# call seq2seq.rnn_decoder
 s_output, s_final_state = seq2seq.rnn_decoder([s_inputs], s_initial_state, multicell)
 
-# transform the list of state outputs to a list of logits.
-# use a linear transformation.
-s_logits = [tf.matmul(bit, weights) + bias for bit in s_output]
+s_logits = [tf.matmul(bit, W) + b for bit in s_output]
 
 s_probs = tf.nn.softmax(s_logits[0])
-
 
 #
 # ==================================================================
@@ -220,8 +199,5 @@ summary_writer.close()
 # ==================================================================
 # ==================================================================
 #
-
-#import matplotlib
-#import matplotlib.pyplot as plt
 #plt.plot( lts )
 #plt.show()
