@@ -12,9 +12,9 @@ from tensorflow.python.ops import seq2seq
 #
 # Global variables
 
-batch_size = 50
+batch_size = 10
 
-sequence_length = 50
+sequence_length = 10
 
 data_loader = TextLoader( ".", batch_size, sequence_length )
 
@@ -164,7 +164,7 @@ lts = []
 
 print "FOUND %d BATCHES" % data_loader.num_batches
 
-for j in range(1000):
+for j in range(10):
 
     state = sess.run( initial_state )
     data_loader.reset_batch_pointer()
@@ -201,7 +201,7 @@ for j in range(1000):
 
 with open('final_out.txt', 'w') as outFile:
     for _ in xrange(15):
-        outFile.write(sample(num=60, prime="foo ba"))
+        outFile.write(sample(num=60, prime="foo ba")+'\n')
 
 summary_writer.close()
 
