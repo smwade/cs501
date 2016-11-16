@@ -4,17 +4,55 @@ import tensorflow as tf
 import numpy as np
 
 from textloader import TextLoader
-from tensorflow.python.ops.rnn_cell import BasicLSTMCell, MultiRNNCell
+from tensorflow.python.ops.rnn_cell import BasicLSTMCell, MultiRNNCell, RNNCell
+from tensorflow.python.ops.rnn_cell import _linear
+from tensorflow.python.ops.math_ops import sigmoid
+from tensorflow.python.ops.math_ops import tanh
+from tensorflow.python.ops import variable_scope as vs
+from tensorflow.python.ops import array_ops
 from tensorflow.python.ops import seq2seq
+
+# ------------------------------------------
 #
+
+class MyGru(RNNCell):
+
+    def __init__(self, num_units, activation = tanh, state_is_tuple=True):
+        self.num_units = num_units
+        self.activation = activation
+
+    @property
+    def state_size(self):
+        return self.num_units
+
+    @property
+    def output_size(self):
+        return self.num_units
+
+    def __call__(self, inputs, state, scope=None):
+        with vs.variable_scope(scope or type(self).__name__):
+
+            with vs.variable_scope('rz'):
+                h = state
+                concat = _linear([inputs, h], 2 * self.num_units, False)
+                r,z = array_ops.split(1,2, concat)
+                r = sigmoid(r)
+                z = sigmoid(z)
+
+            with vs.variable_scope('h_2'):
+                h_tilde = self.activation(_linear([inputs, r * h], self.num_units, False))
+                new_h = z * h + (1-z) * h_tilde
+        
+        return new_h, new_h
+
 #
 # -------------------------------------------
 #
 # Global variables
 
-batch_size = 10
+batch_size = 50
 
-sequence_length = 10
+sequence_length = 50
 
 data_loader = TextLoader( ".", batch_size, sequence_length )
 
@@ -52,8 +90,11 @@ learning_rate = 0.002
 # ------------------
 # COMPUTATION GRAPH 
 
-cell1 = BasicLSTMCell( state_dim, state_is_tuple=False )
-cell2 = BasicLSTMCell( state_dim, state_is_tuple=False )
+# cell1 = BasicLSTMCell( state_dim, state_is_tuple=False )
+# cell2 = BasicLSTMCell( state_dim, state_is_tuple=False )
+
+cell1 = MyGru( state_dim, state_is_tuple=False )
+cell2 = MyGru( state_dim, state_is_tuple=False )
 
 multicell = MultiRNNCell( [cell1, cell2], state_is_tuple=True)
 initial_state = multicell.zero_state(batch_size, tf.float32)
@@ -164,7 +205,7 @@ lts = []
 
 print "FOUND %d BATCHES" % data_loader.num_batches
 
-for j in range(10):
+for j in range(100):
 
     state = sess.run( initial_state )
     data_loader.reset_batch_pointer()
@@ -196,12 +237,12 @@ for j in range(10):
 
 #    print sample( num=60, prime="And " )
 #    print sample( num=60, prime="ababab" )
-    print sample( num=60, prime="foo ba" )
+    print sample( num=60, prime=" " )
 #    print sample( num=60, prime="abcdab" )
 
 with open('final_out.txt', 'w') as outFile:
     for _ in xrange(15):
-        outFile.write(sample(num=60, prime="foo ba")+'\n')
+        outFile.write(sample(num=60, prime=" ")+'\n')
 
 summary_writer.close()
 
